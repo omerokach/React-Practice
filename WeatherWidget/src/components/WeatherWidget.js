@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class WeatherWidget extends Component {
   render() {
     return (
-      <div>
+      <div className="weather-card">
         <p>{this.props.day}</p>
         <img
           src={this.props.type}

@@ -2,6 +2,7 @@ import "./App.css";
 import WeatherWidget from "./components/WeatherWidget";
 import sunny from "./images/sunny.png";
 import partly_cloudy from "./images/partly_cloudy.png";
+import './weatherComponents.css'
 
 const weatherArray = [
   {
@@ -50,17 +51,17 @@ const weatherArray = [
 
 function App() {
   return (
-    <>
+    <div className="container">
       {weatherArray.map((weather, i) => (
         <WeatherWidget
           key={`weather-key-${i}`}
           day={weather.day}
           type={weather.type}
-          minTemperature={weather.minTemperature}
-          maxTemperature={weather.maxTemperature}
+          minTemperature={`${weather.minTemperature}°`}
+          maxTemperature={`${weather.maxTemperature}°`}
         />
       ))}
-    </>
+    </div>
   );
 }
 
