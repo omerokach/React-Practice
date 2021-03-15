@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import IssueComponent from "./components/IssueComponent";
+import "./issue.css"
 const issuesArray = [
   {
     title: "there is and issue",
@@ -71,20 +70,17 @@ const issuesArray = [
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {issuesArray.map((issue, i) => (
+        <IssueComponent
+          title={issue.title}
+          id={issue.id}
+          timeCreated={issue.timeCreated}
+          userName={issue.userName}
+          Tags={issue.Tags}
+          numOfComments={issue.numOfComments}
+          key ={`isuueKey-${i}`}
+        />
+      ))}
     </div>
   );
 }

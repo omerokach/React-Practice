@@ -1,0 +1,46 @@
+.App{
+    width: 80%;
+    margin: auto;
+}
+.issue-container{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 10px;
+}
+.inffo{
+    margin: 0;
+    padding: 1px;
+}
+.comments{
+    float:right;
+}
+.issue-card{
+    display: inline;
+}
+.tag-card{
+    padding: 10px;
+    margin: 1px;
+}
+.title{
+    font-weight: bold;
+    display : inline ;
+}
+.tag-div{
+    display: inline;
+}
+.needs-invastigation{
+    padding: 8px;
+    border-radius: 15px;
+    background-color: purple;
+}
+.needs-triage{
+    padding: 8px;
+    border-radius: 15px;
+    background-color: red;
+}
+.issue-bug-report{
+    padding: 8px;
+    background-color: orange;
+    border-radius: 15px;
+}
